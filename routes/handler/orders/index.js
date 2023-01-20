@@ -7,6 +7,8 @@ const updateUnpaid = require("./updateUnpaid");
 const destroy = require("./destroy");
 const getUnverifOrder = require("./getUnverifOrder");
 
+const getOrderVerifyNull = require("./getOrderVerifyNull")
+
 module.exports = {
     create,
     getAll,
@@ -15,5 +17,6 @@ module.exports = {
     getPaid,
     updateUnpaid,
     destroy,
-    getUnverifOrder
+    getUnverifOrder,
+    getOrderVerifyNull
 }

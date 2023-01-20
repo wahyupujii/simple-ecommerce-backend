@@ -24,7 +24,6 @@ module.exports = async (req, res) => {
     if (checkProductCart) {
         return res.status(400).json({
             status: false,
-            message: "already product in cart"
         })
     }
 

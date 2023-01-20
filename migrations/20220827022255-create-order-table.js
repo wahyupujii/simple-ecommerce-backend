@@ -53,8 +53,8 @@ module.exports = {
           table: 'users',
           field: 'id'
       },
-      onDelete: 'cascade',
-      onUpdate: 'cascade'
+      onDelete: 'CASCADE',
+      onUpdate: 'CASCADE'
    })
   },
 

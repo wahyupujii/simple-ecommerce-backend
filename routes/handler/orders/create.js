@@ -1,4 +1,4 @@
-const {Orders} = require("../../../models");
+const { Orders } = require("../../../models");
 const Validator = require("fastest-validator");
 const v = new Validator();
 

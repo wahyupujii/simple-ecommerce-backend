@@ -1,4 +1,4 @@
-const {Users} = require("../../../models");
+const { Users } = require("../../../models");
 const bcrypt = require("bcrypt");
 const Validator = require("fastest-validator");
 const v = new Validator();
@@ -27,7 +27,7 @@ module.exports = async (req, res) => {
     }
 
     const user = await Users.findOne({
-        where: {email : req.body.email}
+        where: { email: req.body.email }
     });
 
     if (!user) {
@@ -46,7 +46,6 @@ module.exports = async (req, res) => {
         })
     }
 
-    // jwt
     const data = {
         id: user.id,
         email: user.email

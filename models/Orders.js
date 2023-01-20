@@ -36,10 +36,14 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.DATE,
             allowNull: false
         }
-  }, {
+    }, {
         tableName: 'orders',
         timestamps: true
     });
+
+    // Orders.associate = models => {
+    //     Orders.belongsTo(models.Users)
+    // }
 
     return Orders;
 }

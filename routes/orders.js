@@ -18,6 +18,8 @@ router.put('/update-unpaid', ordersHandler.updateUnpaid);
 
 router.get('/paid', verifyToken, ordersHandler.getPaid);
 
-router.get('/get-unverified-order', ordersHandler.getUnverifOrder)
+router.get('/get-unverified-order', ordersHandler.getUnverifOrder)  // -> for admin
+
+router.get('/get-order-verify-null', verifyToken, ordersHandler.getOrderVerifyNull)
 
 module.exports = router;

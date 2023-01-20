@@ -10,7 +10,6 @@ module.exports = async (req, res) => {
     if (!unverifOrders) {
         return res.status(404).json({
             status: false,
-            message: "no data found"
         })
     }
 

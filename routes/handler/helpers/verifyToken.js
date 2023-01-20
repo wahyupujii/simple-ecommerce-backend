@@ -8,7 +8,6 @@ module.exports = async (req, res, next) => {
 
     if (token) {
         jwt.verify(token, JWT_SECRET_TOKEN, (err, decoded) => {
-            console.log("decoded", decoded)
             if (err) return res.status(401).json({ status: false, message: err.message })
             req.user = decoded
             next();
