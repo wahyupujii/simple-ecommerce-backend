@@ -14,7 +14,7 @@ const {
 module.exports = async (req, res) => {
     const schema = {
         email: "email|empty:false",
-        password: "string|min:6",
+        password: "string",
     }
 
     const validate = v.validate(req.body, schema);

@@ -47,7 +47,8 @@ module.exports = async (req, res) => {
         }
     
         await updateUnpaid.update({
-            proof_payment: `images/proof_payment/${filename}`
+            proof_payment: `images/proof_payment/${filename}`,
+            verification: 'Paid',
         })
     
         return res.status(200).json({

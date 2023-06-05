@@ -4,7 +4,7 @@ module.exports = async (req, res) => {
     const paidOrder = await Orders.findOne({
         where: {
             user_id: req.user.data.id,
-            verification: "Pending"
+            verification: "Paid"
         }
     })
 

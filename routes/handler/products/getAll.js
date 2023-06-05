@@ -1,10 +1,10 @@
-const {Products} = require("../../../models");
+const { Products } = require("../../../models");
 
 module.exports = async (req, res) => {
     const products = await Products.findAll({
-	order: [
-		['id', 'DESC']
-	]
+        order: [
+            ['id', 'DESC']
+        ]
     });
 
     if (!products) {
