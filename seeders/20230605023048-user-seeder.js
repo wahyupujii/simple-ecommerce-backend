@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt");
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  async up(queryInterface, Sequelize) {
     /**
      * Add seed commands here.
      *
@@ -16,7 +16,14 @@ module.exports = {
      * }], {});
     */
 
-    let userArray = [];
+    let userArray = [{
+      name: 'Wahyu Puji',
+      email: 'wahyu@gmail.com',
+      password: await bcrypt.hash('q', 10),
+      real_password: "q",
+      created_at: fakerID_ID.date.past(),
+      updated_at: fakerID_ID.date.recent(),
+    }];
     for (let i = 0; i < 10; i++) {
       let obj = {
         name: fakerID_ID.person.fullName(),
@@ -32,7 +39,7 @@ module.exports = {
     await queryInterface.bulkInsert('users', [...userArray])
   },
 
-  async down (queryInterface, Sequelize) {
+  async down(queryInterface, Sequelize) {
     /**
      * Add commands to revert seed here.
      *
